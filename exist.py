@@ -3,10 +3,13 @@ from pyppeteer import launch
 from bs4 import BeautifulSoup
 import csv
 
-URL = 'https://exist.ua/akkumuljatornye-batarei/trademark=eurostart/?page={}'
+# Enter url and file name here
+URL = 'https://exist.ua/akkumuljatornye-batarei/trademark=eurostart/'
+FILE_NAME = 'Eurostart'
+
+URL = URL.strip() + '?page={}'
 HOST = 'https://exist.ua//'
 GOODS = []
-FILE_NAME = 'Eurostart'
 FILE = 'exist' + FILE_NAME + '.csv'
 
 async def main():
